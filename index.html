@@ -1,0 +1,115 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>My IIIF Gallery</title>
+  <meta name="description" content="add description here">
+  <meta name="author" content="add author name here">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.3.1/openseadragon.min.js" type="text/javascript">
+
+</script>
+
+<style>
+body {
+    background-image:  url("http://127.0.0.1:8182/iiif/2/image12.jpg/full/800,/0/default.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin-right: 200px;
+}
+</style>
+
+<style>
+body {
+    background-color:  ivory;
+}
+</style>
+
+<style>
+div {
+    text-align: justify;
+}
+</style>
+
+<style>
+p.serif {
+    font-family: "Times New Roman", Times, serif;
+}
+
+p.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+
+<style>
+h1 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+}
+
+ul {
+  font-size: 20px;
+}
+</style>
+
+<style>
+h3 {
+    font-style: italic;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div><h1>"Las Aventuras del Negro Raul"<h1><div>
+<div><h3>by Arturo Lanteri</h3><div>
+<div><h3>El Hogar (1916)</h3><div>
+
+<img src="http://127.0.0.1:8182/iiif/2/image.jpg/16,5,2641,500/500,/0/default.jpg"/>
+
+  <ul>
+   <li><a href="image.html"target="_blank">"El primer flirt"</a></li><img src="http://127.0.0.1:8182/iiif/2/image.jpg/full/50,/0/default.jpg"/>
+   <li><a href="image1.html"target="_blank">"Un domingo porteño"</a></li><img src="http://127.0.0.1:8182/iiif/2/image1.jpg/full/50,/0/default.jpg"/>
+   <li><a href="image2.html"target="_blank">"Un debut sensacional"</a></li><img src="http://127.0.0.1:8182/iiif/2/image2.jpg/full/50,/0/default.jpg"/>
+   <li><a href="image3.html"target="_blank">"Un drama pasional"</a></li><img src="http://127.0.0.1:8182/iiif/2/image3.jpg/full/50,/0/default.jpg"/>
+   <li><a href="image4.html"target="_blank">"Una noche en el Colón"</a></li><img src="http://127.0.0.1:8182/iiif/2/image4.jpg/full/50,/0/default.jpg"/>
+   <li><a href="image5.html"target="_blank">"Un huesped ilustre"</a></li><img src="http://127.0.0.1:8182/iiif/2/image5.jpg/full/50,/0/default.jpg"/>
+   <li><a href="image6.html"target="_blank">"Su debut en la haute"</a></li><img src="http://127.0.0.1:8182/iiif/2/image6.jpg/full/50,/0/default.jpg"/>
+   <li><a href="image7.html"target="_blank">"En la calle Florida"</a></li><img src="http://127.0.0.1:8182/iiif/2/image7.jpg/full/50,/0/default.jpg"/>
+   <li><a href="image8.html"target="_blank">"El VI Salon Nacional"</a></li><img src="http://127.0.0.1:8182/iiif/2/image8.jpg/full/50,/0/default.jpg"/>
+   <li><a href="image9.html"target="_blank">"Campeón de boxeo"</a></li><img src="http://127.0.0.1:8182/iiif/2/image9.jpg/full/50,/0/default.jpg"/>
+   <li><a href="image10.html"target="_blank">"Una noche de cine"</a></li><img src="http://127.0.0.1:8182/iiif/2/image10.jpg/full/50,/0/default.jpg"/>
+   <!-- ... add more -->
+ </ul>
+
+<p> Raúl Grigera was born on October 23th, 1886 in the neighborhood of Monsterrat, Buenos Aires, Argentina. Afro-Argentine, he was very popular during the decades of the 1920s and the 1930s. He died in 1955, in the mental institution 'Open Door' where he had been confined since 1941'.
+Alberto, Paulina. 'Títere roto”: vidas (posibles) y vidas póstumas del 'Negro Raúl', 2016 <p>
+
+<p>'...las caricaturas de Raúl en la historieta que salía en El Hogar en 1916 ('Las aventuras del Negro Raúl', de Lanteri) retratan, sin tapujos, a Raúl como un “mono con frac”, un “simulador” grotesco y patético (Gutiérrez, 1999: 75-76).'
+'...Raul's caricatures in the cartoon that appeared in El Hogar in 1916 ('Las aventuras del Negro Raul', by Lanteri) portray Raul as a 'monkey in a suit', a grotesque and pathetic simulator (Gutiérrez, 1999: 75-76).'
+Alberto, Paulina. 'Títere roto”: vidas (posibles) y vidas póstumas del 'Negro Raúl',147: 2016.<p>
+
+
+<div id="myImageViewer" style="height: 400px"></div>
+
+   <script type= "text/javascript">
+   var viewer = OpenSeadragon ( {
+     id: "myImageViewer",
+     tileSources: ["http://127.0.0.1:8182/iiif/2/image11.jpg/info.json"],
+     showNavigationControl: false
+   });
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="mirador/css/mirador-combined.css">
+    <title>Mirador Viewer</title>
+    <style type="text/css">
+     #viewer {
+       width: 100%;
+       height: 100%;
+       position: fixed;
+     }
+    </style>
+  </head>
+  <body>
+    <div id="viewer"></div>
+
+    <script src="mirador/mirador.min.js"></script>
+    <script src="https://rawgit.com/mejackreed/annotot/master/app/assets/javascripts/annotot/annotot_endpoint.js"></script>
+    <script type="text/javascript">
+
+     $(function() {
+       myMiradorInstance = Mirador({
+         id: "viewer",
+         layout: "1x2",
+         buildPath: "mirador/",
+         data: [
+           { manifestUri: "http://media.nga.gov/public/manifests/nga_highlights.json", location: "National Gallery of Art"},
+           { manifestUri: "http://localhost:8080/manifest.json", location: "My Manifest"},
+           { manifestUri: "https://gist.githubusercontent.com/mejackreed/2a84eab914273f00114c10ee239b5aa5/raw/manifest.json", location: "IIIF DHSI Workshop"},
+           { manifestUri: "https://manifests.britishart.yale.edu/Osbornfa1", location: "New Haven, Beinecke Rare Book and Manuscript Library, Yale University, Osborn fa1"}
+         ],
+         windowObjects: [{
+           loadedManifest: "https://gist.githubusercontent.com/mejackreed/2a84eab914273f00114c10ee239b5aa5/raw/manifest.json",
+           viewType: "ImageView",
+           slotAddress: "row1.column1"
+         },
+         {
+           loadedManifest: "https://manifests.britishart.yale.edu/Osbornfa1",
+           viewType: "BookView",
+           slotAddress: "row1.column2"
+         }
+         ],
+  annotationEndpoint: {
+   name: "Annotot",
+   module: "AnnototEndpoint",
+   options: {
+   endpoint: "http://ras.scta.info/annotations"
+   }
+ }
+       });
+     });
+    </script>
+  </body>
+</html>

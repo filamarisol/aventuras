@@ -1,0 +1,81 @@
+<!doctype html>
+
+ <html lang="en">
+ <head>
+   <meta charset="utf-8">
+
+   <title>"Un domingo porteño"</title>
+   <meta name="description" content="add description here">
+   <meta name="author" content="add author name here">
+
+   <link rel="stylesheet" type="text/css" href="mirador/css/mirador-combined.css">
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.3.1/openseadragon.min.js" type="text/javascript">
+
+   </script>
+
+   <script src="mirador/mirador.min.js"></script>
+
+ </style>
+
+ <style>
+ body {
+     background-color:  ivory;
+ }
+ </style>
+
+ <style>
+ div {
+     text-align: center;
+ }
+ </style>
+
+ </head>
+
+ <body>
+   <div><h1>"Un domingo porteño"</h1><div>
+
+<div><a href="index.html">Home</a><div>
+<div><a href="image.html">Previous</a><div>
+<div><a href="image2.html">Next</a><div>
+
+<img src="http://127.0.0.1:8182/iiif/2/image1.jpg/full/500,/0/default.jpg"/>
+
+  <img src="http://127.0.0.1:8182/iiif/2/image1.jpg/1862,2425,934,1089/500,/0/default.jpg"/>
+
+<div id="myImageViewer" style="width: 400px; height: 500px"></div>
+<div id="myMiradorViewer" style="width: 400px; height: 500px; position: absolute;"></div>
+
+   <script type= "text/javascript">
+   var viewer = OpenSeadragon ( {
+     id: "myImageViewer",
+     tileSources: ["http://127.0.0.1:8182/iiif/2/image1.jpg/info.json"],
+     showNavigationControl: false
+   });
+
+   $(function() {
+     myMiradorInstance = Mirador({
+       id: "myMiradorViewer",
+       layout: "1x1",
+       buildPath: "mirador/",
+       data: [
+         { manifestUri: "http://localhost:8080/manifest.json", location: "My Manifest"}
+       ],
+       windowObjects: [{
+         loadedManifest: "http://localhost:8080/manifest.json",
+         viewType: "ImageView",
+         slotAddress: "row1"
+       }
+       ],
+     });
+   });
+
+   </script>
+
+    <p>by Arturo Lanteri</p>
+    <p>El Hogar</p>
+    <p>Issue 355</p>
+    <p>July 21st, 1916</p>
+
+ </body>
+ </html>

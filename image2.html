@@ -1,0 +1,74 @@
+<!doctype html>
+
+ <html lang="en">
+ <head>
+   <meta charset="utf-8">
+
+   <title>"Un debut sensacional"</title>
+   <meta name="description" content="add description here">
+   <meta name="author" content="add author name here">
+
+   <link rel="stylesheet" type="text/css" href="mirador/css/mirador-combined.css">
+
+   <script src="mirador/mirador.min.js"></script>
+
+   <style>
+   body {
+       background-color:  ivory;
+   }
+   </style>
+
+   <style>
+   div {
+       text-align: center;
+   }
+   </style>
+
+ </head>
+
+ <body>
+   <div><h1>"Un debut sensacional"</h1><div>
+
+<div><a href="index.html">Home</a><div>
+<div><a href="image1.html">Previous</a><div>
+<div><a href="image3.html">Next</a><div>
+
+   <img src="http://127.0.0.1:8182/iiif/2/image2.jpg/full/500,/0/default.jpg"/>
+
+   <img src="http://127.0.0.1:8182/iiif/2/image2.jpg/241,1864,972,1368/500,/0/default.jpg"/>
+
+   <div id="myMiradorViewer" style="width: 700px; height: 700px; position: absolute;"></div>
+
+  <script type="text/javascript">
+   $(function() {
+     myMiradorInstance = Mirador({
+       id: "myMiradorViewer",
+       layout: "1x2",
+       buildPath: "mirador/",
+       data: [
+         { manifestUri: "http://localhost:8080/manifest1.json", location: "My Manifest"},
+         { manifestUri: "http://localhost:8080/manifest2.json", location: "My Manifest"}
+       ],
+       windowObjects: [{
+         loadedManifest: "http://localhost:8080/manifest1.json",
+         viewType: "ImageView",
+         slotAddress: "row1.column1"
+       },
+       {
+         loadedManifest: "http://localhost:8080/manifest2.json",
+         viewType: "ImageView",
+         slotAddress: "row1.column2"
+       }
+       ],
+     });
+   });
+
+   </script>
+
+   <p>by Arturo Lanteri</p>
+   <p>El Hogar</p>
+   <p>Issue 359</p>
+   <p>August 18th, 1916</p>
+
+ </body>
+ </html>
